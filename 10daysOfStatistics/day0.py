@@ -49,3 +49,29 @@ array = [int(s) for s in arrayString.split(' ')]
 print(myMean(array,nElem))
 print(myMedian(array,nElem))
 print(myMode(array))
+
+###########
+
+def myWeightedMean(array, weights, n):
+    
+    weightedSum = 0.0
+    
+    for i in range(n):
+        
+        weightedSum += weights[i]*array[i]
+    
+    mean_w = weightedSum/sum(weights)
+    
+    return round(mean_w,1) 
+
+nElem = int(input())
+arrayString = input()
+weightsString = input()
+
+array = [int(s) for s in arrayString.split(' ')]
+weights = [int(s) for s in weightsString.split(' ')]
+
+
+print(myWeightedMean(array,weights,nElem))
+
+
