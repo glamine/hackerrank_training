@@ -23,6 +23,8 @@ def factorial(n):
     else:
         return n*factorial(n - 1)
     
+    
+# export OUTPUT_PATH="home/inindekikral/Desktop/output.txt"
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
