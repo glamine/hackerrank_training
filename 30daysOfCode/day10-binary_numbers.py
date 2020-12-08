@@ -18,9 +18,9 @@ def getLongestConsecOnes(n):
     length = 0
     currentLength = 0
     
-    for i in range(n.bit_length()):
+    for i in range(n.bit_length()): # cool, works also with a while shifting the boolean
         
-        if n & (1 << i):
+        if n & (1 << i): # any int different from zero is True for boolean (bool())
             currentLength += 1
             length = max(length,currentLength)
         else:
