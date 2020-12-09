@@ -38,3 +38,11 @@ print(round(sum([binomial(i, 6, proba) for i in range(3, 7)]), 3))
 from scipy.stats import binom
    
 print(round(sum([binom.pmf(i, 6, proba) for i in range(3, 7)]), 3))
+
+
+#####################
+
+perc, trials = list(map(int, input().split(" "))) # interessant !when using floats RUNTIME ERROR, better int !
+proba = perc/100
+print(round(sum([binomial(i, trials, proba) for i in range(3)]), 3)) # case 0 compris !
+print(round(sum([binomial(i, trials, proba) for i in range(2, trials + 1)]), 3))
