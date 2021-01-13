@@ -46,6 +46,7 @@ class Solution:
                 
                 myQueue.pop(0)
                 
+                # improve by not adding if value is None (quicker)
                 myQueue.append(pathLeft)
                 myQueue.append(pathRight)
         
